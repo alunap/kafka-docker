@@ -1,16 +1,22 @@
-version: '2'
+version: '3'
 services:
   zookeeper:
-    image: wurstmeister/zookeeper
+    image: zookeeper
     ports:
       - "2181:2181"
   kafka:
     build: .
     ports:
-      - "9092"
+      - "9092-9095:9092"
     environment:
-      DOCKER_API_VERSION: 1.22
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
+      DOCKER_API_VERSION: 1.41
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.178.32
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  pyspark:
+    image: "jupyter/all-spark-notebook"
+    volumes:
+      - .:/home/jovyan
+    ports:
+      - 8888:8888
