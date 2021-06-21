@@ -3,6 +3,10 @@ Changelog
 
 Kafka features are not tied to a specific kafka-docker version (ideally all changes will be merged into all branches). Therefore, this changelog will track changes to the image by date.
 
+21-Jun-2021
+-----------
+- Forked. Added support for Kafka '2.8.0'. Updated docker-compose version to '3.0'. Added jupyter/all-spark-notebook image. Added port range.
+
 06-Jun-2021
 ----------
 - Add support for darwin arm by to azul/zulu-openjdk-alpine base image

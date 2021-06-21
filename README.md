@@ -4,6 +4,13 @@
 [![](https://images.microbadger.com/badges/image/wurstmeister/kafka.svg)](https://microbadger.com/images/wurstmeister/kafka "Get your own image badge on microbadger.com")
 [![Build Status](https://travis-ci.org/wurstmeister/kafka-docker.svg?branch=master)](https://travis-ci.org/wurstmeister/kafka-docker)
 
+Notes for this fork
+===================
+
+This is an fork of the excellent work done by wurstmeister. However, I also want to include spark in the docker network. I have incorporated a couple of pull requests for Wustmeister's repository that were not yet accepted, but look good to me. In addition I have updated the docker-compose version, updated the kafka version to 2.8.0, added a port range so that Single Node Muliple Brokers setup works, and added the jupyter/all-spark-notebook image to the compose file.
+
+The following is from the original repository and unchanged at this time:
+
 kafka-docker
 ============
 
